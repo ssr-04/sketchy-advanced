@@ -1,0 +1,52 @@
+.red{
+    color:red;
+}
+
+.txt{
+    font-family: cursive;
+    font-size: 60px;
+}
+
+.txt1{
+    font-family: cursive;
+    font-size: 60px;
+    color: red;
+}
+
+.txt2{
+    font-family: cursive;
+    font-size: 40px;
+    color: red;
+}
+
+.s_text1{
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+}
+.s_text2{
+    font-family: fantasy;
+    font-weight: lighter;
+    font-size: 35px;
+    text-align: center;
+}
+
+.large{
+    font-size: 35px;
+    font-family: fantasy;
+}
+
+.footer1{
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.label{
+    color: blue;
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+  

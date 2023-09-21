@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block css %}
+  <link href="/static/styles.css" rel="stylesheet">
+  <link href="/static/styles1.css" rel="stylesheet">
+  <link href="/static/animation.css" rel="stylesheet">
+  {% endblock %}
+
+{% block main %}
+    <input type="hidden" id="user" value="{{ user }}">
+    <div class="container-fluid col-12">
+        <div class = "row">
+            <div class="col-lg-6 col-sm-6">
+                <img src="{{ url_for('static', filename='images/Qrcode.png')}}">
+            </div>
+
+            <div class="loader col-lg-6 col-sm-6" style="display:block">
+                <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+                    <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+                    <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+                    <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+                    <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+                </svg>
+                <div class="state1" style="display:None">
+                    <h3 style="color:rgb(190, 20, 20)">Waiting for Scan and upload...</h3>
+                </div>
+                <div class="state2" style="display:None">
+                    <h3 style="color:green">✅ Sketch uploaded</h3><br>
+                    <h3 style="color: red">Processing the result...</h3>
+                </div>
+                <div class="state3" style="display:None">
+                    <h3 style="color:green">✅ Sketch uploaded</h3><br>
+                    <h3 style="color: green">✅ Result generated</h3><br>
+                    <a href="./result" class="txt2">Click here for results</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer class="text-muted text-center footer1 mt-5 mb-3">
+        Developed by <a href="https://www.linkedin.com/in/sachinsabariram/">Sachin M Sabariram</a>
+    </footer>
+{% endblock %}
+
+
+{% block script %}
+<script type="module" src="{{ url_for('static', filename='js/firebase.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/check.js') }}"></script>
+{% endblock %}

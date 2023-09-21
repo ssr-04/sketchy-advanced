@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+
+{% block loader %}
+<div class="parent" id="loader0">
+    <h1 id="load-head">Baking your Imagination...</h1>
+    <div id="cooking">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div id="area">
+            <div id="sides">
+                <div id="pan"></div>
+                <div id="handle"></div>
+            </div>
+            <div id="pancake">
+                <div id="pastry"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="mt-3">
+    {% if check %}
+    <h3 class="txt1">Art by {{user}} </h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-center txt">Sketch</h3>
+                <img src={{sketch}} alt="Sketch" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center txt">Result</h3>
+                <img src={{result}} alt="Result" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    {% else %}
+        <h3>Invalid request</h3>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+{% block script %}
+<script>
+    window.addEventListener("load", () => {
+        $('#loader0').addClass('ninja');
+        $('#index0').removeClass('ninja');
+    });
+
+</script>
+
+{% endblock %}

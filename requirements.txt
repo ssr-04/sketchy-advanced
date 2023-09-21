@@ -1,0 +1,7 @@
+gunicorn
+flask
+firebase-admin
+replicate
+pypng
+urllib3
+pyqrcode
