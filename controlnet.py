@@ -2,7 +2,6 @@ import os
 import replicate
 os.environ['REPLICATE_API_TOKEN'] = 'r8_1nh4HC3tqllsdse9sm1ueWgYbcyywDf05wjz6'
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 
 def render(path,model,prompt=""):
