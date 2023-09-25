@@ -2,6 +2,7 @@ gunicorn
 flask
 firebase-admin
 replicate
+opencv-python
 pypng
 urllib3<2
 pyqrcode
