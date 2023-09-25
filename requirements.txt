@@ -3,5 +3,5 @@ flask
 firebase-admin
 replicate
 pypng
-urllib3
+urllib3<2
 pyqrcode
